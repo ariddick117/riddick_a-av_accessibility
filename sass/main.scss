@@ -200,6 +200,70 @@ body {
     margin-right:20px;
 }
 
+
+// Query Start
+
+//Tablet
+@media screen and (min-width: 765px) {
+  #mainNav button {
+   width:80px;
+   height:80px;
+   margin-top:-150px;
+   margin-left:40px;
+  }
+
+  #introText {
+    margin-top:80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size:36px;
+    line-height:50px;
+  }
+
+  #flex-slider {
+    padding-top: 175px;
+  }
+
+  .flickity-prev-next-button {
+    height: 60px;
+    width: 60px;
+  }
+
+  .slider {
+    height: 200px;
+    width: 200px;
+  }
+
+  .sliderText {
+    font-size: 40px;
+  }
+
+  .desc {
+    font-size: 30px;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1280px) {
+  #mainNav button {
+    width:120px;
+    height:120px;
+    margin-top:-250px;
+    margin-left:80px;
+   }
+
+   .flickity-prev-next-button {
+    height: 100px;
+    width: 100px;
+  }
+
+  .slider {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+
 // Imports
 @import 'modules/_vars';
 

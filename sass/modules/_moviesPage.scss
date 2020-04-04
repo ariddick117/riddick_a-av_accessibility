@@ -51,4 +51,55 @@
     font-size: 25px;
 }
 
+.movie_bio p {
+    font-size: 14px;
+}
+
+
+// Queries
+//Tablet
+@media screen and (min-width: 765px) {
+    .movie_bio {
+        margin-top: 25px;
+        margin-left: 40px;
+    }
+
+    .movie_bio h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .movie_bio p {
+        font-size: 20px;
+    }
+  }
+  
+  // Desktop
+  @media screen and (min-width: 1280px) {
+      .pg-title h1 {
+        font-size: 60px;
+        color: #662d91;
+        margin: 10px 0px 10px 60px;
+    }
+
+    .pg-title p {
+        font-size: 35px;
+        margin-top: 0px;
+        margin-left: 60px;
+    }
+
+    .movie_bio {
+        margin-top: 25px;
+        margin-left: 60px;
+    }
+
+    .movie_bio h2 {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .movie_bio p {
+        font-size: 30px;
+    }
+  }
 
