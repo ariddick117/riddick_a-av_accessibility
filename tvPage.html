@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"> <!-- icon library -->
+  <link rel="stylesheet" href="public/css/main.css">
+  
+  <title>Video with Vue</title>
+</head>
+
+<body>
+  <main id="app">
+    <header>
+    
+      <h1 class="hidden">Movies Page</h1>
+      <header id="mainHeader">
+          <div id="header_bar">
+          <img src="images/header_bar.svg" alt="header" class="headerImage">
+          <nav id ="mainNav">
+              <h2 class = "hidden">main navigation</h2>
+              <button id="button"></button>
+              <div id="burgerCon">
+                <ul id="burgerMenu">
+                  <ul class="endingPoints">
+                    <!-- avatar / user icon-->
+                    <!-- if the user has an avatar, show it -->
+                    <span id="userHead"> {{user.uname}}</span>
+                    <li v-if="user.avatar">
+                      <img v-bind:src="'images/' + user.avatar" alt="user avatar" class="u-avatar">
+                    </li>
+          
+                    <!-- else show this -->
+                    <li v-else>
+                      <i class="fas fa-user"></i>
+                    </li>
+                    <!-- end avatar -->
+          
+                    <!-- settings icon / functionality -->
+                    <!-- if our user object has admin rights, then show this -->
+                    <li v-if="user.iadmin"> <!-- *******************screwed this up in database FIX PLZ to isadmin********************* -->
+                      <i @click="setUserPrefs" class="fas fa-cog" role="button"></i>
+                    </li>
+                    <!-- end user settings -->
+          
+                    <!-- log in / log out -->
+                    <li>
+                      <i v-on:click="logInOut" class="fas fa-power-off u-login" :class="{ 'logged-in' : user.isLoggedIn }" role="button"></i> <!-- logged-in comes from css-->
+                    </li>
+                  </ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="moviesPage.html">Movies</a></li>
+                  <li><a href="tvPage.html">TV Shows</a></li>
+                  <li><a href="musicPage.html">Music</a></li>
+                </ul>
+                
+              </div>
+            </nav>
+          </div>
+      </header>
+      <nav>
+        
+      </nav>
+    </header>
+
+    <section class="pg-title">
+      <!-- <img src="images/movies.svg" alt="Movies Icon" id="title-icon"> -->
+      <h1>Television</h1>
+      <p>
+        Select a poster to start binge-watching!
+      </p>
+      <hr class="divider">
+    </section>
+
+    <section class="movie_poster">
+      <video class="poster" controls>
+        <source src="video/gilligans_island.mp4" type="video/mp4">
+        <track label="English" kind="subtitles" srclang="en" src="captions/gilligan.vtt" default>
+      </video>
+    </section>
+
+    <section class="movie_bio">
+      <h2>Gilligan's Island</h2>
+      <p>A high school wise guy is determined to have a day off from school, despite what the Principal thinks of that. Starring Matthew Broderick, Alan Ruck, and Mia Sara.</p>
+    </section>
+  </main>
+
+  <footer id="mainFooter">
+    <img src="images/roku-wht.svg" alt="footerLogo" class="footerLogo">
+    
+    <h1 id="copyrightText">Copyright All Rights Reserved</h1>
+</footer>
+
+  <!-- Script Section -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
