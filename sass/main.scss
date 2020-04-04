@@ -11,9 +11,8 @@
 
 #mainHeader
 {
-    
     width:100%;
-    height:225px;
+    //height:225px;
 }
 
 .headerImage
@@ -22,6 +21,10 @@
 }
 
 //burger nav
+
+#burgerMenu ul {
+  list-style-type: none;
+}
 
 #burgerCon
 {
@@ -39,10 +42,10 @@
 
 #mainNav
 {
-    background-color:#662d91;
-    width:85%;
-    position:absolute;
-    -moz-border-radius-bottomright: 100px;
+  background-color:#662d91;
+  width:85%;
+  position:absolute;
+  -moz-border-radius-bottomright: 100px;
   -webkit-border-bottom-right-radius: 100px; 
   z-index:30;
 }
@@ -94,9 +97,9 @@
 #intro
 {
     width:100%;
-    height:350px;
+    //height:350px;
     background-color:#E6E6E6;
-    margin-top:-155px;
+    margin-top:-60px;
     position:absolute;
     z-index:-10;
     text-align:center;
@@ -107,11 +110,11 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#662d91;
     margin-top:80px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size:25px;
     line-height:30px;
 }
-
-
 
 
 * {
@@ -119,7 +122,10 @@
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
+body { 
+  font-family: sans-serif;
+  margin: 0 auto;
+}
 
 .gallery {
   background: #EEE;
@@ -143,6 +149,10 @@ body { font-family: sans-serif; }
   line-height: 200px;
   font-size: 0px;
   color: #fff;
+}
+
+#flex-slider {
+  padding-top: 100px;
 }
 
 .slider
@@ -190,7 +200,10 @@ body { font-family: sans-serif; }
     margin-right:20px;
 }
 
+// Imports
+@import 'modules/_vars';
+
+// @import 'modules/lightbox';
 @import 'modules/userStyles';
 @import 'modules/movieStyles';
-
 @import 'modules/moviesPage';
